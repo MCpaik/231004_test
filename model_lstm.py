@@ -12,6 +12,7 @@ class TextLSTM(nn.Module):
     self.W = nn.Parameter(torch.randn([self.n_hidden, self.n_class]).type(self.dtype))
     self.b = nn.Parameter(torch.randn([self.n_class]).type(self.dtype))
     self.Softmax = nn.Softmax(dim=1)
+    print(222)
 
   def forward(self, hidden_and_cell, X):
     X = X.transpose(0, 1)
